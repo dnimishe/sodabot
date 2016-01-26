@@ -13,6 +13,7 @@ def _initialise():
     plugins.register_user_command(['gh' , 'source'])
 
 def pull(bot, event, *args):
+    '''This command downloads the latest code from GitHub and makes it available for you'''
     try:
         g = git.cmd.Git(git_dir)
         status = g.pull()
